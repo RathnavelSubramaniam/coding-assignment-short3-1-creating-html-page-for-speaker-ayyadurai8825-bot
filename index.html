@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Tags </title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:20px;
+}
+
+h1{
+    text-align:center;
+    color:#440d0d;
+}
+
+.container{
+    display:flex;
+}
+
+.buttons{
+    width:30%;
+}
+
+.buttons button{
+    width:100%;
+    padding:12px;
+    margin:5px 0;
+    border:none;
+    background:#007bff;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    border-radius:5px;
+}
+
+.buttons button:hover{
+    background:#0056b3;
+}
+
+.content{
+    width:70%;
+    background:white;
+    margin-left:20px;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+
+pre{
+    background:#eee;
+    padding:10px;
+    border-radius:5px;
+    overflow:auto;
+}
+</style>
+
+</head>
+<body>
+
+<h1>HTML Tags Explanation</h1>
+
+<div class="container">
+
+<div class="buttons">
+
+
+
+<button onclick="showTag('h1')">&lt;h1&gt;</button>
+
+<button onclick="showTag('p')">&lt;p&gt;</button>
+
+<button onclick="showTag('a')">&lt;a&gt;</button>
+
+<button onclick="showTag('img')">&lt;img&gt;</button>
+
+<button onclick="showTag('table')">&lt;table&gt;</button>
+
+<button onclick="showTag('ul')">&lt;ul&gt;</button>
+
+<button onclick="showTag('ol')">&lt;ol&gt;</button>
+
+<button onclick="showTag('li')">&lt;li&gt;</button>
+
+<button onclick="showTag('div')">&lt;div&gt;</button>
+
+<button onclick="showTag('span')">&lt;span&gt;</button>
+
+<button onclick="showTag('form')">&lt;form&gt;</button>
+
+<button onclick="showTag('input')">&lt;input&gt;</button>
+
+<button onclick="showTag('button')">&lt;button&gt;</button>
+
+<button onclick="showTag('br')">&lt;br&gt;</button>
+
+<button onclick="showTag('hr')">&lt;hr&gt;</button>
+
+</div>
+
+<div class="content">
+
+<h2 id="title">Click Any Button</h2>
+
+<p id="description">
+Select an HTML tag to view its explanation and example.
+</p>
+
+<pre id="example"></pre>
+
+</div>
+
+</div>
+
+<script>
+
+const tags={
+
+h1:{
+title:"<h1> Heading Tag",
+desc:"The <h1> tag is used to create the main heading of a webpage.",
+example:`<h1>Welcome to HTML</h1>`
+},
+
+p:{
+title:"<p> Paragraph Tag",
+desc:"The <p> tag is used to write paragraphs.",
+example:`<p>This is a paragraph.</p>`
+},
+
+a:{
+title:"<a> Anchor Tag",
+desc:"The <a> tag creates hyperlinks.",
+example:`<a href="https://google.com">Google</a>`
+},
+
+img:{
+title:"<img> Image Tag",
+desc:"The <img> tag displays images.",
+example:`<img src="flower.jpg" alt="Flower">`
+},
+
+table:{
+title:"<table> Table Tag",
+desc:"The <table> tag creates tables.",
+example:`<table border="1">
+<tr><th>Name</th></tr>
+<tr><td>Ayyadurai</td></tr>
+</table>`
+},
+
+ul:{
+title:"<ul> Unordered List",
+desc:"Creates a bulleted list.",
+example:`<ul>
+<li>Apple</li>
+<li>Mango</li>
+</ul>`
+},
+
+ol:{
+title:"<ol> Ordered List",
+desc:"Creates a numbered list.",
+example:`<ol>
+<li>HTML</li>
+<li>CSS</li>
+</ol>`
+},
+
+li:{
+title:"<li> List Item",
+desc:"Represents an item inside a list.",
+example:`<li>HTML</li>`
+},
+
+div:{
+title:"<div> Division Tag",
+desc:"Groups HTML elements into sections.",
+example:`<div>This is a div.</div>`
+},
+
+span:{
+title:"<span> Span Tag",
+desc:"Used to style small portions of text.",
+example:`<span style="color:red;">Red Text</span>`
+},
+
+form:{
+title:"<form> Form Tag",
+desc:"Creates a form for user input.",
+example:`<form>
+<input type="text">
+</form>`
+},
+
+input:{
+title:"<input> Input Tag",
+desc:"Creates input fields.",
+example:`<input type="text" placeholder="Enter Name">`
+},
+
+button:{
+title:"<button> Button Tag",
+desc:"Creates clickable buttons.",
+example:`<button>Click Me</button>`
+},
+
+br:{
+title:"<br> Break Tag",
+desc:"Moves text to the next line.",
+example:`Hello<br>World`
+},
+
+hr:{
+title:"<hr> Horizontal Rule",
+desc:"Creates a horizontal line.",
+example:`<hr>`
+}
+
+};
+
+function showTag(tag){
+
+document.getElementById("title").innerText=tags[tag].title;
+
+document.getElementById("description").innerText=tags[tag].desc;
+
+document.getElementById("example").innerText=tags[tag].example;
+
+}
+
+</script>
+
+</body>
+</html>
